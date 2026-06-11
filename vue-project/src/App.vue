@@ -239,14 +239,14 @@
             </div>
           </div>
 
-          <!-- Contract Compare - 合同对比 -->
+          <!-- Contract Compare - Contract Comparison -->
           <div v-if="currentView === 'contract-compare'" class="page-container animate-fade-in">
             <div class="mb-8">
               <h1 class="text-2xl font-bold text-slate-800 flex items-center"><i class="ph ph-git-diff text-2xl text-violet-600 mr-2"></i> Smart Contract Version Comparison</h1>
               <p class="text-slate-500 mt-1">Upload original and revised contracts, AI automatically identifies clause differences and generates detailed comparison reports</p>
             </div>
 
-            <!-- Step 1: 文件上传 -->
+            <!-- Step 1: File Upload -->
             <div v-if="compareStep === 1">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
                 <div>
@@ -290,14 +290,14 @@
               </div>
             </div>
 
-            <!-- Step 2: 对比进行中 -->
+            <!-- Step 2: Comparing -->
             <div v-if="compareStep === 2" class="card text-center py-16">
               <div class="spinner-lg mx-auto mb-5"></div>
               <h3 class="text-lg font-medium text-slate-800 mb-2">AI is comparing and analyzing...</h3>
               <p class="text-slate-500 text-sm">{{ compareProgress }}</p>
             </div>
 
-            <!-- Step 3: 对比结果 -->
+            <!-- Step 3: Comparison Results -->
             <div v-if="compareStep === 3 && compareResult" class="space-y-5">
               <div class="flex items-center justify-between">
                 <button @click="compareStep = 1; compareResult = null" class="btn-outline text-sm"><i class="ph ph-arrow-left mr-1.5"></i>Back to Upload</button>
@@ -365,7 +365,7 @@
               </div>
             </div>
 
-            <!-- Step 4: 历史记录 -->
+            <!-- Step 4: History -->
             <div v-if="compareStep === 4" class="space-y-5">
               <div class="flex items-center justify-between">
                 <button @click="compareStep = 1" class="btn-outline text-sm"><i class="ph ph-arrow-left mr-1.5"></i>Back to Upload</button>
@@ -404,14 +404,14 @@
             </div>
           </div>
 
-          <!-- AI智能校对 -->
+          <!-- AI Smart Proofreading -->
           <div v-if="currentView === 'proofread'" class="page-container animate-fade-in">
             <div class="mb-8">
               <h1 class="text-2xl font-bold text-slate-800 flex items-center"><i class="ph ph-text-aa text-2xl text-emerald-600 mr-2"></i> AI Smart Proofreading</h1>
               <p class="text-slate-500 mt-1">Upload document or enter text, AI automatically identifies grammar, spelling, punctuation errors and provides correction suggestions</p>
             </div>
 
-            <!-- Step 1: 上传/输入 -->
+            <!-- Step 1: Upload/Input -->
             <div v-if="proofreadStep === 1">
               <div class="mb-5">
                 <div class="flex items-center space-x-3 mb-4">
@@ -448,14 +448,14 @@
               </div>
             </div>
 
-            <!-- Step 2: 校对进行中 -->
+            <!-- Step 2: Proofreading -->
             <div v-if="proofreadStep === 2" class="card text-center py-16">
               <div class="spinner-lg mx-auto mb-5"></div>
               <h3 class="text-lg font-medium text-slate-800 mb-2">AI is proofreading and analyzing...</h3>
               <p class="text-slate-500 text-sm">{{ proofreadProgress }}</p>
             </div>
 
-            <!-- Step 3: 校对结果 -->
+            <!-- Step 3: Proofreading Results -->
             <div v-if="proofreadStep === 3 && proofreadResult" class="space-y-5">
               <div class="flex items-center justify-between">
                 <button @click="proofreadStep = 1; proofreadResult = null" class="btn-outline text-sm"><i class="ph ph-arrow-left mr-1.5"></i>Back to Upload</button>
@@ -553,7 +553,7 @@
               </div>
             </div>
 
-            <!-- Step 4: 历史记录 -->
+            <!-- Step 4: History -->
             <div v-if="proofreadStep === 4" class="space-y-5">
               <div class="flex items-center justify-between">
                 <button @click="proofreadStep = 1" class="btn-outline text-sm"><i class="ph ph-arrow-left mr-1.5"></i>Back to Upload</button>
@@ -592,14 +592,14 @@
             </div>
           </div>
 
-          <!-- 法律文书智能解读 -->
+          <!-- Legal Document Smart Interpretation -->
           <div v-if="currentView === 'doc-interpret'" class="page-container animate-fade-in">
             <div class="mb-8">
               <h1 class="text-2xl font-bold text-slate-800 flex items-center"><i class="ph ph-book-open-text text-2xl text-amber-600 mr-2"></i> Legal Document Smart Interpretation</h1>
               <p class="text-slate-500 mt-1">Complex clauses, understood at a glance — Upload legal documents, AI smartly parses key clauses and risks</p>
             </div>
 
-            <!-- Step 1: 上传文书 -->
+            <!-- Step 1: Upload Document -->
             <div v-if="interpretStep === 1">
               <div class="mb-5">
                 <div class="flex items-center space-x-3 mb-4">
@@ -636,7 +636,7 @@
               </div>
             </div>
 
-            <!-- Step 2: Preview确认 -->
+            <!-- Step 2: Preview Confirmation -->
             <div v-if="interpretStep === 2" class="space-y-5">
               <div class="card">
                 <h3 class="font-semibold text-slate-800 mb-4 flex items-center"><i class="ph ph-eye text-base text-amber-500 mr-2"></i>Preview & Confirm</h3>
@@ -666,14 +666,14 @@
               </div>
             </div>
 
-            <!-- Step 3: 解读进行中 -->
+            <!-- Step 3: Interpreting -->
             <div v-if="interpretStep === 3" class="card text-center py-16">
               <div class="spinner-lg mx-auto mb-5"></div>
               <h3 class="text-lg font-medium text-slate-800 mb-2">AI is interpreting...</h3>
               <p class="text-slate-500 text-sm">{{ interpretProgress }}</p>
             </div>
 
-            <!-- Step 4: 解读结果 -->
+            <!-- Step 4: Interpretation Results -->
             <div v-if="interpretStep === 4 && interpretResult" class="space-y-5">
               <div class="flex items-center justify-between">
                 <button @click="interpretStep = 1; interpretResult = null" class="btn-outline text-sm"><i class="ph ph-arrow-left mr-1.5"></i>Back to Upload</button>
@@ -817,7 +817,7 @@
               </div>
             </div>
 
-            <!-- Step 5: 解读历史 -->
+            <!-- Step 5: Interpretation History -->
             <div v-if="interpretStep === 5" class="space-y-5">
               <div class="flex items-center justify-between">
                 <button @click="interpretStep = 1" class="btn-outline text-sm"><i class="ph ph-arrow-left mr-1.5"></i>Back to Upload</button>
@@ -859,9 +859,9 @@
             </div>
           </div>
 
-          <!-- Contract Draft - 智能合同起草 -->
+          <!-- Contract Draft - Smart Contract Drafting -->
           <div v-if="currentView === 'contract-draft'" class="page-container animate-fade-in">
-            <!-- Step 1: 合同模板展示 -->
+            <!-- Step 1: Contract Template Display -->
             <div v-if="draftStep === 1">
               <div class="mb-6">
                 <h1 class="text-2xl font-bold text-slate-800 flex items-center"><i class="ph ph-note-pencil text-2xl text-teal-600 mr-2"></i> Smart Contract Drafting</h1>
@@ -1188,7 +1188,7 @@
                   </div>
                 </div>
                 <div class="p-5 space-y-4">
-                  <!-- 输入模式切换 -->
+                  <!-- Input Mode Toggle -->
                   <div class="flex items-center gap-2 mb-4">
                     <button @click="draftInputMode = 'form'"
                       :class="['px-3 py-1.5 rounded-lg text-sm font-medium transition-all', draftInputMode === 'form' ? 'bg-teal-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200']">
@@ -1200,7 +1200,7 @@
                     </button>
                   </div>
 
-                  <!-- 自然语言输入 -->
+                  <!-- Natural Language Input -->
                   <div v-if="draftInputMode === 'nlu'" class="space-y-4">
                     <div class="bg-blue-50 rounded-lg p-3 text-sm text-blue-700">
                       <span class="font-medium">Tip:</span>Describe your contract needs in natural language, and the system will automatically extract key information. For example: "Zhang San and I are signing a residential lease agreement, monthly rent 5000 yuan, 2-year term, one month deposit and three months rent upfront"
@@ -1226,7 +1226,7 @@
                       </div>
                     </div>
 
-                    <!-- 缺失字段追问 -->
+                    <!-- Missing Field Follow-up -->
                     <div v-if="draftNluQuestions.length > 0" class="bg-orange-50 rounded-lg p-3 space-y-2">
                       <h4 class="font-medium text-orange-700 text-sm">The following information is missing, please supplement:</h4>
                       <div v-for="(q, i) in draftNluQuestions" :key="i" class="text-sm text-orange-600">
@@ -1235,7 +1235,7 @@
                     </div>
                   </div>
 
-                  <!-- 原有Form Mode -->
+                  <!-- Original Form Mode -->
                   <div v-else>
                   <div v-for="field in selectedTemplate?.fields || []" :key="field.key" class="grid grid-cols-1 sm:grid-cols-12 gap-2 items-start">
                     <div class="sm:col-span-3">
@@ -1263,7 +1263,7 @@
               </div>
             </div>
 
-            <!-- Step 3: 大纲Preview -->
+            <!-- Step 3: Outline Preview -->
             <div v-if="draftStep === 3" class="max-w-4xl mx-auto">
               <div class="flex items-center space-x-2 mb-6">
                 <button @click="draftStep = 2" class="p-2 rounded-lg hover:bg-slate-100 text-slate-500"><i class="ph ph-arrow-left text-lg"></i></button>
@@ -1592,7 +1592,7 @@
                   </div>
                 </div>
                 <div class="p-5 space-y-4">
-                  <!-- 输入模式切换 -->
+                  <!-- Input Mode Toggle -->
                   <div class="flex items-center gap-2 mb-4">
                     <button @click="docInputMode = 'form'"
                       :class="['px-3 py-1.5 rounded-lg text-sm font-medium transition-all', docInputMode === 'form' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200']">
@@ -1604,7 +1604,7 @@
                     </button>
                   </div>
 
-                  <!-- 自然语言输入 -->
+                  <!-- Natural Language Input -->
                   <div v-if="docInputMode === 'nlu'" class="space-y-4">
                     <div class="bg-blue-50 rounded-lg p-3 text-sm text-blue-700">
                       <span class="font-medium">Tip:</span>Describe your document needs in natural language, and the system will automatically extract key information. For example: "I want to sue Zhang San for a debt of 100,000 yuan, borrowed in January 2024, agreed to return within one year, still not returned"
@@ -1630,7 +1630,7 @@
                       </div>
                     </div>
 
-                    <!-- 缺失字段追问 -->
+                    <!-- Missing Field Follow-up -->
                     <div v-if="docNluQuestions.length > 0" class="bg-orange-50 rounded-lg p-3 space-y-2">
                       <h4 class="font-medium text-orange-700 text-sm">The following information is missing, please supplement:</h4>
                       <div v-for="(q, i) in docNluQuestions" :key="i" class="text-sm text-orange-600">
@@ -1639,7 +1639,7 @@
                     </div>
                   </div>
 
-                  <!-- 原有Form Mode -->
+                  <!-- Original Form Mode -->
                   <div v-else>
                   <div v-for="field in selectedDocTemplate?.fields || []" :key="field.key" class="grid grid-cols-1 sm:grid-cols-12 gap-2 items-start">
                     <div class="sm:col-span-3">
@@ -2201,7 +2201,7 @@ async function submitContractReview(file, text) {
   finally { clearInterval(t) }
 }
 
-// Contract Compare - 合同版本对比
+// Contract Compare - Contract Version Comparison
 const compareStep = ref(1)
 const compareOriginalFile = ref(null)
 const compareRevisedFile = ref(null)
@@ -2335,7 +2335,7 @@ function exportCompareReport() {
   showToast('Report exported', 'success')
 }
 
-// AI Proofread - 智能校对
+// AI Proofread - Smart Proofreading
 const proofreadStep = ref(1)
 const proofreadInputMode = ref('file')
 const proofreadFile = ref(null)
@@ -2525,7 +2525,7 @@ function exportProofreadReport() {
   showToast('Report exported', 'success')
 }
 
-// Doc Interpret - 法律文书智能解读
+// Doc Interpret - Legal Document Smart Interpretation
 const interpretStep = ref(1)
 const interpretInputMode = ref('file')
 const interpretFile = ref(null)
@@ -2733,7 +2733,7 @@ function exportInterpretReport() {
   showToast('Report exported', 'success')
 }
 
-// Contract Draft - 智能合同起草
+// Contract Draft - Smart Contract Drafting
 const draftStep = ref(1)
 const contractCategories = ref([])
 const selectedTemplate = ref(null)
